@@ -28,9 +28,14 @@ if (!weather.ok) {
   console.dir(result);
 
 const { productText } = result ?? {};
-
+if(productText) {
 document.querySelector("#first").textContent=productText
+} else {
 
+
+document.querySelector("#first").textContent="The property doesn't exist or the property is undefined"
+
+}
 });
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 

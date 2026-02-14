@@ -1,4 +1,5 @@
 //screen 1280,551
+//This addeventlister is to get a selected product from a selected forcast office QPF,SGX
 var latest = document.querySelector("#latest");
 latest.addEventListener("click", async () => {
   var product = document.querySelector("#product");
@@ -31,6 +32,7 @@ const { productText } = result ?? {};
 document.querySelector("#first").textContent=productText
 
 });
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
 

@@ -35,5 +35,8 @@ latest.addEventListener("click", async () => {
     document.querySelector("#first").textContent =
       "The property doesn't exist or the property is undefined";
   }
+
+  product.textContent="";
+  office.textContent=""
 });
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$

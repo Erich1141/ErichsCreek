@@ -1,0 +1,18 @@
+++Product list++
+AFD- Area Forecast Discussion
+QPS- Quantitavive Precipitaion Statement(Forecast)
+
+++ This code is to access the QPS from SGX ++
+
+const res = await fetch("https://api.weather.gov/products/types/QPS/locations/SGX/latest", {
+  headers: { "User-Agent": "erich1141 (you@example.com)" }
+});
+const latest = await res.json();
+
+// Follow the @id link to get the full text product
+const prodRes = await fetch(latest["@id"] ?? latest?.products?.[0]?.["@id"], {
+  headers: { "User-Agent": "erich1141 (you@example.com)" }
+});
+const prod = await prodRes.json();
+
+console.log(prod?.productText);

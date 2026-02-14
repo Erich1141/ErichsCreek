@@ -36,7 +36,7 @@ latest.addEventListener("click", async () => {
       "The property doesn't exist or the property is undefined";
   }
 
-  product.textContent="";
-  office.textContent=""
+  product.value="";
+  office.value=""
 });
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$

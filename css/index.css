@@ -5,46 +5,33 @@
   padding: 0px;
 }
 body {
-display: flex;
-flex-wrap: wrap;
-width: 100%vh;
-height: 100%vh;
-background-color: rgb(133, 149, 180);
-
-
-
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%vh;
+  height: 100%vh;
+  background-color: rgb(133, 149, 180);
 }
 #query {
-width:100%;
-background-color: rgb(20, 83, 210);
-border-bottom: 2px solid black;
-
-
-
+  width: 100%;
+  background-color: rgb(20, 83, 210);
+  border-bottom: 2px solid black;
 }
 
-
-
-
-input,button {
-margin-left: 2%;
-margin-top: .5%;
-margin-bottom: .5%;
-border: 2px solid rgb(210, 230, 129);
-
-
+input,
+button {
+  margin-left: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  border: 2px solid rgb(210, 230, 129);
 }
 #first {
-background-color: rgb(237, 214, 185);
-width:100%;
-margin-top: 2%;
-/*margin-left: 20%;
+  white-space: pre-wrap;
+  background-color: rgb(237, 214, 185);
+  width: 100%;
+  margin-top: 2%;
+  /*margin-left: 20%;
 margin-right: 20%;*/
-min-height: 120px;
-height:auto;
-border: 2px solid black;
-
-
-
-
+  min-height: 120px;
+  height: auto;
+  border: 2px solid black;
 }

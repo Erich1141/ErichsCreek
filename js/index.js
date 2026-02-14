@@ -25,4 +25,12 @@ if (!weather.ok) {
 
   var result = await weather.json();
   console.dir(result);
+
+const { productText } = result ?? {};
+
+document.querySelector("#first").textContent=productText
+
 });
+
+
+

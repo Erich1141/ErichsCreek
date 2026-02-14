@@ -29,8 +29,8 @@ button {
   background-color: rgb(237, 214, 185);
   width: 100%;
   margin-top: 2%;
-  /*margin-left: 20%;
-margin-right: 20%;*/
+  margin-left: 3%;
+  margin-right: 3%;
   min-height: 120px;
   height: auto;
   border: 2px solid black;

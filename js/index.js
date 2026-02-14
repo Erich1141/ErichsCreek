@@ -4,7 +4,10 @@ var latest = document.querySelector("#latest");
 latest.addEventListener("click", async () => {
   var product = document.querySelector("#product");
   var office = document.querySelector("#forecastoffice");
-  var payload = { product: product.value.trim().toUpperCase(), office: office.value.trim().toUpperCase() };
+  var payload = {
+    product: product.value.trim().toUpperCase(),
+    office: office.value.trim().toUpperCase(),
+  };
 
   var weather = await fetch(
     "https://erichs-real-server.onrender.com/API/weather/latest",
@@ -13,31 +16,24 @@ latest.addEventListener("click", async () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload)
-    }
+      body: JSON.stringify(payload),
+    },
   );
 
-
-if (!weather.ok) {
+  if (!weather.ok) {
     console.log("Server error:", weather.status, await weather.text());
     return;
   }
 
-
   var result = await weather.json();
   console.dir(result);
 
-const { productText } = result ?? {};
-if(productText) {
-document.querySelector("#first").textContent=productText
-} else {
-
-
-document.querySelector("#first").textContent="The property doesn't exist or the property is undefined"
-
-}
+  const { productText } = result ?? {};
+  if (productText) {
+    document.querySelector("#first").textContent = productText;
+  } else {
+    document.querySelector("#first").textContent =
+      "The property doesn't exist or the property is undefined";
+  }
 });
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-
-

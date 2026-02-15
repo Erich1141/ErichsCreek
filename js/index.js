@@ -66,9 +66,14 @@ latest.addEventListener("click", async () => {
   }
 
   var result = await weather.json();
-  console.dir(result);
+  var section=result.STATION[0].OBSERVATIONS
+  const{ precip_accum_one_hour_value1:{date_time:time_1hour,value:value_1hour},precip_accum_value_1:{date_time:time_season,value:value_season}}=section;
 
-  /*const { productText } = result ?? {};
+console.log(time_1hour,value_1hour)
+console.log(time_season,value_season)
+
+
+ /* const { productText } = result ?? {};
   if (productText) {
     document.querySelector("#first").textContent = productText;
   } else {

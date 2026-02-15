@@ -40,7 +40,7 @@ latest.addEventListener("click", async () => {
   office.value=""
 })      
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-var latest = document.querySelector("#lates1t");
+var latest = document.querySelector("#latest1");
 latest.addEventListener("click", async () => {
   
   var station = document.querySelector("#station");

@@ -10,7 +10,7 @@ latest.addEventListener("click", async () => {
   };
 
   var weather = await fetch(
-    "https://erichs-real-server.onrender.com/API/weather/latest",
+    "https://erichs-real-server.onrender.com/API/weather/latestProduct",
     {
       method: "POST",
       headers: {
@@ -38,5 +38,44 @@ latest.addEventListener("click", async () => {
 
   product.value="";
   office.value=""
-});
-//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+})      
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+var latest = document.querySelector("#lates1t");
+latest.addEventListener("click", async () => {
+  
+  var station = document.querySelector("#station");
+  var payload = {
+    
+    station: station.value.trim().toUpperCase(),
+  };
+
+  var weather = await fetch(
+    "https://erichs-real-server.onrender.com/API/weather/latestObservation",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    },
+  );
+
+  if (!weather.ok) {
+    console.log("Server error:", weather.status, await weather.text());
+    return;
+  }
+
+  var result = await weather.json();
+  console.dir(result);
+
+  /*const { productText } = result ?? {};
+  if (productText) {
+    document.querySelector("#first").textContent = productText;
+  } else {
+    document.querySelector("#first").textContent =
+      "The property doesn't exist or the property is undefined";
+  }
+
+  station.value="";*/
+  
+})      

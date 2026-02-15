@@ -12,9 +12,15 @@ body {
   background-color: rgb(133, 149, 180);
 }
 #query {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   background-color: rgb(20, 83, 210);
   border-bottom: 2px solid black;
+}
+#group,
+#group1 {
+  width: 33%;
 }
 
 input,
@@ -23,7 +29,21 @@ button {
   margin-top: 0.5%;
   margin-bottom: 0.5%;
   border: 2px solid rgb(210, 230, 129);
+  border-radius: 10%;
 }
+#observation {
+  width: 166px;
+  height: 20px;
+  background-color: #ffffff;
+  margin-left: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  font-size: 14px;
+  border: 2px solid rgb(210, 230, 129);
+  color:gray;
+  border-radius: 10%;
+}
+]
 #first {
   white-space: pre-wrap;
   background-color: rgb(237, 214, 185);

@@ -42,7 +42,7 @@ latest.addEventListener("click", async () => {
   office.value = "";
 });
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-/*document.querySelector("#first").textContent = "";
+document.querySelector("#first").textContent = "";
 var latest1 = document.querySelector("#latest1");
 latest1.addEventListener("click", async () => {
   var station = document.querySelector("#station");
@@ -113,7 +113,21 @@ temp.className="data"
   station.value = "";
 });
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+var fileGet=document.querySelector("#file")
+fileGet.addEventListener("click", async () => {
+
+var raw=await fetch("https://erichs-real-server.onrender.com/API/retrieve/testFile")
+var response=await raw.text()
+console.log(response)
+
+
+
+
+
+})
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function timeSync(val) {
   let date = new Date(val);
   let options = {
@@ -131,4 +145,5 @@ function timeSync(val) {
   val = formattedDate;
 
   return val;
-}*/
+}
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&

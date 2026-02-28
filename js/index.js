@@ -118,7 +118,7 @@ temp.className="data"
 var fileGet=document.querySelector("#file")
 fileGet.addEventListener("click", async () => {
 
-var raw=await fetch("https://erichs-real-server.onrender.com/API/retrieve/image")
+var raw=await fetch("https://erichs-real-server.onrender.com/API/retrieve/testFile")
 console.log("sent file")
 console.log(raw.status)
 var response=await raw.text()

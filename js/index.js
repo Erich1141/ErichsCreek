@@ -149,4 +149,4 @@ function timeSync(val) {
   return val;
 }
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
- window.location.href = "https://erichs-real-server.onrender.com/auth/google";
+ 

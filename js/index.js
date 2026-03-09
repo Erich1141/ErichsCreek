@@ -95,10 +95,12 @@ latest1.addEventListener("click", async () => {
   obs.timeHour=dt1.timeOnly;
   obs.seasonTime=dt2.timeOnly;
   obs.seasonDate=dt2.dateOnly;
+  
 
   
 
   var temp2 = Object.entries(obs);
+  console.log(JSON.stringify(temp2))
   console.log(temp2);
   if (time_season) {
     var box = document.querySelector("#first");

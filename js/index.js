@@ -90,7 +90,7 @@ latest1.addEventListener("click", async () => {
     seasonValue: value_season,
   };
   var dt1 = intDate(obs.timeHour);
-  var dt2 = intdate(obs.seasonTime);
+  var dt2 = intDate(obs.seasonTime);
   obs.timeDate=dt1.timeOnly;
   obs.timehour=dt1.dateOnly;
   obs.seasonTime=dt2.timeOnly;

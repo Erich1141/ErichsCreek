@@ -1,4 +1,4 @@
-import { intDate } from "./internationaldate";
+import { intDate } from "./internationaldate.js";
 
 //screen 1280,551
 //This addeventlister is to get a selected product from a selected forcast office QPF,SGX

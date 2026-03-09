@@ -1,3 +1,5 @@
+import { intDate } from "./internationaldate";
+
 //screen 1280,551
 //This addeventlister is to get a selected product from a selected forcast office QPF,SGX
 document.querySelector("#first").textContent = "";
@@ -87,8 +89,15 @@ latest1.addEventListener("click", async () => {
     seasonTime: time_season,
     seasonValue: value_season,
   };
-  obs.timeHour = timeSync(obs.timeHour);
-  obs.seasonTime = timeSync(obs.seasonTime);
+  var dt1 = intDate(obs.timeHour);
+  var dt2 = intdate(obs.seasonTime);
+  obs.timeDate=dt1.timeOnly;
+  obs.timehour=dt1.dateOnly;
+  obs.seasonTime=dt2.timeOnly;
+  obs.seasonDate=dt2.dateOnly;
+
+  
+
   var temp2 = Object.entries(obs);
   console.log(temp2);
   if (time_season) {

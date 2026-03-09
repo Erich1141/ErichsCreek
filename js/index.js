@@ -89,22 +89,17 @@ latest1.addEventListener("click", async () => {
   };
   obs.timeHour = timeSync(obs.timeHour);
   obs.seasonTime = timeSync(obs.seasonTime);
-  var temp2= Array.from(obs)
+  var temp2 = Object.entries(obs);
+  console.log(temp2);
   if (time_season) {
     var box = document.querySelector("#first");
 
     for (var i = 0; i <= 3; i++) {
       var temp = document.createElement("div");
-temp.className="data"
-
+      temp.className = "data";
 
       box.append(temp);
     }
-
-
-
-
-
   } else {
     document.querySelector("#first").textContent =
       "The property doesn't exist or the property is undefined";
@@ -113,22 +108,16 @@ temp.className="data"
   station.value = "";
 });
 
-
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-var fileGet=document.querySelector("#file")
+var fileGet = document.querySelector("#file");
 fileGet.addEventListener("click", async () => {
+  var raw = await fetch(
+    "https://erichs-real-server.onrender.com/API/weather/latestObservation/MFLC1",
+  );
 
-var raw=await fetch("https://erichs-real-server.onrender.com/API/weather/latestObservation/MFLC1")
-
-
-var response=await raw.json()
-console.log(response)
-
-
-
-
-
-})
+  var response = await raw.json();
+  console.log(response);
+});
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function timeSync(val) {
   let date = new Date(val);
@@ -147,5 +136,4 @@ function timeSync(val) {
   val = formattedDate;
 
   return val;
-}//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
- 
+} //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&

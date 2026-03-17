@@ -96,7 +96,14 @@ latest1.addEventListener("click", async () => {
   obs.seasonTime=dt2.timeOnly;
   obs.seasonDate=dt2.dateOnly;
   
-
+/*[
+  ["timeValue", 0],
+  ["timeDate", "03/08/2026"],
+  ["timeHour", "7:00:00 PM PDT"],
+  ["seasonValue", 51.52],
+  ["seasonDate", "03/08/2026"],
+  ["seasonHour", "8:45:00 PM PDT"]
+]*/
   
 
   var temp2 = Object.entries(obs);

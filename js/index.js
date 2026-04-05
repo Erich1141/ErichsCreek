@@ -5,7 +5,10 @@ import { intDate } from "./internationaldate.js";
 document.querySelector("#first").textContent = "";
 var latest = document.querySelector("#latest");
 
-latest.addEventListener("click", async () => {
+
+
+//Gets the latest forcast product
+latest.addEventListener("click", async () => {  
   var product = document.querySelector("#product");
   var office = document.querySelector("#forecastoffice");
   var payload = {

@@ -19,7 +19,7 @@ body {
   border-bottom: 2px solid black;
 }
 #group,
-#group1 {
+#group1,#group2 {
   width: 33%;
 }
 
@@ -31,7 +31,7 @@ button {
   border: 2px solid rgb(210, 230, 129);
   border-radius: 10%;
 }
-#observation {
+#observation,#series {
   width: 166px;
   height: 20px;
   background-color: #ffffff;

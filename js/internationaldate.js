@@ -24,4 +24,3 @@ export function intDate(date) {
 
   return { dateOnly, timeOnly };
 }
-intDate()

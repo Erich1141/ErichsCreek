@@ -10,6 +10,7 @@ body {
   width: 100%vh;
   height: 100%vh;
   background-color: rgb(133, 149, 180);
+  position: relative;
 }
 #query {
   display: flex;

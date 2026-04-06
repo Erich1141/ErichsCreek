@@ -162,6 +162,7 @@ lists.addEventListener("click", () => {
   box.style.height = "auto";
   box.style.backgroundColor = "black";
   box.style.color = "white";
+  box.style.position="absolute"
 
   var closeBox = document.createElement("div");
   closeBox.style.color = "red";

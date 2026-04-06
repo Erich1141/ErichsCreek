@@ -5,10 +5,8 @@ import { intDate } from "./internationaldate.js";
 document.querySelector("#first").textContent = "";
 var latest = document.querySelector("#latest");
 
-
-
 //Gets the latest forcast product
-latest.addEventListener("click", async () => {  
+latest.addEventListener("click", async () => {
   var product = document.querySelector("#product");
   var office = document.querySelector("#forecastoffice");
   var payload = {
@@ -94,12 +92,12 @@ latest1.addEventListener("click", async () => {
   };
   var dt1 = intDate(obs.timeHour);
   var dt2 = intDate(obs.seasonTime);
-  obs.timeDate=dt1.dateOnly;
-  obs.timeHour=dt1.timeOnly;
-  obs.seasonTime=dt2.timeOnly;
-  obs.seasonDate=dt2.dateOnly;
-  
-/*[
+  obs.timeDate = dt1.dateOnly;
+  obs.timeHour = dt1.timeOnly;
+  obs.seasonTime = dt2.timeOnly;
+  obs.seasonDate = dt2.dateOnly;
+
+  /*[
   ["timeValue", 0],
   ["timeDate", "03/08/2026"],
   ["timeHour", "7:00:00 PM PDT"],
@@ -107,10 +105,9 @@ latest1.addEventListener("click", async () => {
   ["seasonDate", "03/08/2026"],
   ["seasonHour", "8:45:00 PM PDT"]
 ]*/
-  
 
   var temp2 = Object.entries(obs);
-  console.log(JSON.stringify(temp2))
+  console.log(JSON.stringify(temp2));
   console.log(temp2);
   if (time_season) {
     var box = document.querySelector("#first");
@@ -158,3 +155,18 @@ function timeSync(val) {
 
   return val;
 } //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+var lists = document.getElementById("Station_List");
+lists.addEventListener("click", () => {
+  var box = document.createElement("div");
+  box.style.width = "300px";
+  box.style.height = "auto";
+  box.style.backgroundColor = "black";
+  box.style.color = "white";
+
+  var closeBox = document.createElement("div");
+  closeBox.style.color = "red";
+  closeBox.textContent = "X Close ";
+  closeBox.style.border = "3px solid red";
+  closeBox.append(box);
+  document.body.append(box);
+});

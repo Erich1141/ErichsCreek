@@ -11,6 +11,7 @@ body {
   height: 100%vh;
   background-color: rgb(133, 149, 180);
   position: relative;
+  
 }
 #query {
   display: flex;
@@ -84,4 +85,25 @@ background-color: #ffffff;
   height: 500px;
   margin-top: 50px;
   margin-left: 400px;
+  
+} 
+#stations {
+
+height:auto;
+width:auto;
+background-color: #bebaf3;
+color:"black";
+position:absolute;
+left:250px;
+top:125px;
+border: 3px solid black;
+
+
+
+}
+#close {
+
+color:red;
+top:100px;
+
 }

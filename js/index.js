@@ -1,4 +1,4 @@
-import { intDate } from "./internationaldate.js";
+import { intDate, grabStations } from "./internationaldate.js";
 
 //screen 1280,551
 //This addeventlister is to get a selected product from a selected forcast office QPF,SGX
@@ -72,7 +72,7 @@ latest1.addEventListener("click", async () => {
   var result = await weather.json();
   var section = result.STATION[0];
 
-  console.log(result);
+  //console.log(result);
 
   const {
     OBSERVATIONS: {
@@ -107,9 +107,9 @@ latest1.addEventListener("click", async () => {
 ]*/
 
   var temp2 = Object.entries(obs);
-  console.log(JSON.stringify(temp2));
+  //console.log(JSON.stringify(temp2));
   console.log(temp2);
-  if (time_season) {
+  if (section) {
     var box = document.querySelector("#first");
 
     for (var i = 0; i <= 3; i++) {
@@ -158,16 +158,23 @@ function timeSync(val) {
 var lists = document.getElementById("Station_List");
 lists.addEventListener("click", () => {
   var box = document.createElement("div");
-  box.style.width = "300px";
-  box.style.height = "auto";
-  box.style.backgroundColor = "black";
-  box.style.color = "white";
-  box.style.position="absolute"
+  box.setAttribute("id", "stations");
 
   var closeBox = document.createElement("div");
-  closeBox.style.color = "red";
-  closeBox.textContent = "X Close ";
-  closeBox.style.border = "3px solid red";
-  closeBox.append(box);
+  closeBox.setAttribute("id", "close");
+  closeBox.textContent = "X   Close Window";
+
+   
+
+  box.append(closeBox);
   document.body.append(box);
+  closeBox.addEventListener("click", () => {
+    var removeBox = document.getElementById("stations");
+    removeBox.remove();
+  });
+
+ grabStations(box);
+
+
+
 });

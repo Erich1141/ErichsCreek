@@ -36,21 +36,28 @@ nav a {
 }
 
 #viewer {
+    width: 90vw;
+
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  width: 1152px;
-  height: auto;
-  overflow: hidden;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 10px;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  border: 2px solid black;
 }
 
 .cameraImage {
+   flex: 0 1 288px;
+
   width: 288px;
-  height: 162px;
+  max-width: 100%;
+  height: auto;
+
   object-fit: contain;
-  background-color: grey;
+  display: block;
 }
 #viewer img.expanded {
   position: fixed;

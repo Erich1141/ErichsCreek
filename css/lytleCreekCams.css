@@ -23,6 +23,18 @@ nav {
   border: 2px solid rgb(23, 44, 235);
   background-color: black;
 }
+nav div {
+  color: white;
+  height: auto;
+  text-align: center;
+  font-size: 1.5em;
+  color: aqua;
+}
+nav a {
+  height: auto;
+  text-decoration: none;
+  color: white;
+}
 
 #viewer {
   display: flex;

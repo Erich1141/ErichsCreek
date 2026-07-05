@@ -1,0 +1,46 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+ 
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+#viewer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1152px;
+  height: auto;
+  overflow: hidden;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cameraImage {
+  width: 288px;
+  height: 162px;
+  object-fit: contain;
+  background-color: grey;
+ 
+}
+#viewer img.expanded {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: black;
+  z-index: 9999;
+}

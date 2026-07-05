@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%vh;
+  height: 100%vh;
+  background-color: rgb(133, 149, 180);
+  position: relative;
+}
+nav {
+  width:100vw;
+  height: 60px;
+  border: 2px solid rgb(23, 44, 235);
+  background-color: black;
+}
+
+nav div {
+  color: white;
+  height: auto;
+  text-align: center;
+  font-size: 1.5em;
+  color: aqua;
+}
+
+
+nav a {
+  height: auto;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
+
+#query {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgb(20, 83, 210);
+  border-bottom: 2px solid black;
+}
+#group,
+#group1,
+#group2 {
+  width: 33%;
+}
+
+input,
+button {
+  margin-left: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  border: 2px solid rgb(210, 230, 129);
+  border-radius: 10%;
+}
+#observation,
+#series {
+  width: 166px;
+  height: 20px;
+  background-color: #ffffff;
+  margin-left: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  font-size: 14px;
+  border: 2px solid rgb(210, 230, 129);
+  color: gray;
+  border-radius: 10%;
+}
+#list {
+  width: 100%;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+#Station_List,
+#Product_List {
+  border: 2px solid rgb(210, 230, 129);
+  background-color: #ffffff;
+}
+
+#first {
+  white-space: pre-wrap;
+  background-color: rgb(237, 214, 185);
+  width: 100%;
+  margin-top: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
+  min-height: 120px;
+  height: auto;
+  border: 2px solid black;
+}
+.data {
+  height: 10px;
+  width: 100%;
+}
+#matt {
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  margin-left: 400px;
+}
+#stations {
+  height: auto;
+  width: auto;
+  background-color: #bebaf3;
+  color: "black";
+  position: absolute;
+  left: 250px;
+  top: 125px;
+  border: 3px solid black;
+}
+#close {
+  color: red;
+  top: 100px;
+}

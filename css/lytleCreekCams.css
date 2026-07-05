@@ -94,7 +94,7 @@ nav a {
 
 .imageCard.expanded .imageOverlay {
   top: 30px;
-  left: 30px;
+  left: 90px;
   font-size: 24px;
   padding: 10px 16px;
   z-index: 2;

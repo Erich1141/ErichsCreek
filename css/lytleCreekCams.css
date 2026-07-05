@@ -43,7 +43,7 @@ nav a {
   flex-wrap: wrap;
   gap: 10px;
 
-  /* justify-content: center;*/
+  justify-content: center;
   align-items: flex-start;
 
   border: 2px solid black;

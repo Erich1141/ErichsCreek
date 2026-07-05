@@ -1,9 +1,8 @@
-const images= document.querySelectorAll("#viewer img")
+const cards = document.querySelectorAll(".imageCard");
 
-images.forEach((img)=> {
-    img.addEventListener("click",()=>{
-       img.classList.toggle("expanded")
-      document.body.classList.toggle("no-scroll")
-    });
-
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("expanded");
+    document.body.classList.toggle("no-scroll");
+  });
 });

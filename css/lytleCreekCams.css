@@ -11,12 +11,9 @@ body {
   height: 100vh;
   overflow: hidden;
   background-color: rgb(167, 208, 210);
-  body {
-
-justify-content: center;
-
-
-  }
+}
+body {
+  justify-content: center;
 }
 body.no-scroll {
   overflow: hidden;
@@ -60,7 +57,7 @@ nav a {
   width: 300px;
   max-width: 100%;
   height: auto;
-margin-top: 2px;
+  margin-top: 2px;
   object-fit: contain;
   display: block;
 }

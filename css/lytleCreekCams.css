@@ -63,6 +63,7 @@ nav a {
 
   padding: 6px 10px;
   border-radius: 6px;
+  z-index: 51;
 }
 
 .cameraImage {
@@ -82,5 +83,5 @@ nav a {
   height: 100vh;
   object-fit: contain;
   background: black;
-  z-index: 9999;
+  z-index: 10;
 }

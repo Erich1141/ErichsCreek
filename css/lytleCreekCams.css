@@ -13,9 +13,7 @@ body {
   background-color: rgb(167, 208, 210);
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
+
 
 nav {
   width: 100vw;

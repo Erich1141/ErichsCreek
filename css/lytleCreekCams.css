@@ -86,7 +86,7 @@ nav a {
 }
 
 .imageCard.expanded .cameraImage {
-  width: 100%;
+  width: 90%;
   
   object-fit: contain;
 }

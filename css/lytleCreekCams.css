@@ -37,8 +37,7 @@ nav a {
 
 #viewer {
   width: auto;
-  max-width: 922;
-  
+  max-width: 932px;
 
   display: flex;
   flex-direction: row;
@@ -47,17 +46,15 @@ nav a {
 
   justify-content: center;
   align-items: flex-start;
-
-  border: 2px solid black;
 }
 
 .cameraImage {
   flex: 0 1 300px;
-
+  border: 2px solid black;
   width: 300px;
   max-width: 100%;
   height: auto;
-
+margin-top: 2px;
   object-fit: contain;
   display: block;
 }

@@ -9,11 +9,9 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  
+
   background-color: rgb(167, 208, 210);
 }
-
-
 
 nav {
   width: 100vw;
@@ -60,7 +58,7 @@ nav a {
   top: 10px;
   left: 10px;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: white;
 
   padding: 6px 10px;

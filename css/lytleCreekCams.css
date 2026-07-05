@@ -36,7 +36,9 @@ nav a {
 }
 
 #viewer {
-  width: auto;
+  width: fit-content;
+  max-width: 70vw;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: row;

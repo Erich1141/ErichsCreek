@@ -22,7 +22,6 @@ nav {
   height: 60px;
   border: 2px solid rgb(23, 44, 235);
   background-color: black;
-  flex-shrink: 0;
 }
 nav div {
   color: white;
@@ -38,9 +37,8 @@ nav a {
 }
 
 #viewer {
-  width: 932px;
-  max-width: 932px;
-  flex-shrink: 0;
+  width: 100vw;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

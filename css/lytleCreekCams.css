@@ -11,6 +11,12 @@ body {
   height: 100vh;
   overflow: hidden;
   background-color: rgb(167, 208, 210);
+  body {
+
+justify-content: center;
+
+
+  }
 }
 body.no-scroll {
   overflow: hidden;

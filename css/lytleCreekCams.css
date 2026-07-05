@@ -46,6 +46,27 @@ nav a {
   align-items: flex-start;
 }
 
+.imageCard {
+  position: relative;
+  width: 300px;
+}
+.imageCard .cameraImage {
+  width: 100%;
+  display: block;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
 .cameraImage {
   flex: 0 1 300px;
   border: 2px solid black;

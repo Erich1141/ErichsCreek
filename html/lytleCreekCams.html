@@ -1,25 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/lytleCreekCams.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/lytleCreekCams.css" />
     <title>Lytle Creek Fire Cams</title>
-</head>
-<body>
-
- <nav id="navbar">
-       <div>Navigation Bar</div>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div>Navigation Bar</div>
       <a href="../index.html">Main Page</a>
       <a href="./WeatherPage.html">Weather Page</a>
-      
     </nav>
- <div id="viewer">
-      <img
-        id="one"
-        class="cameraImage"
-        src="https://erichs-real-server.onrender.com/API/lytleCreekCams/san_sevaine_photo/1"
-        alt="San Sevaine camera1" />
+    <div id="viewer">
+      <div class="imageCard">
+        <img
+          id="one"
+          class="cameraImage"
+          src="https://erichs-real-server.onrender.com/API/lytleCreekCams/san_sevaine_photo/1"
+          alt="San Sevaine camera1" />
+
+        <div class="imageOverlay">Camera 1</div>
+      </div>
       <img
         id="two"
         class="cameraImage"
@@ -47,13 +49,6 @@
         alt="San Sevaine camera6" />
     </div>
 
-
-
-
-
-
-
-
-    <script type = "module" defer src="../js/lytleCreekCams.js"></script>
-</body>
+    <script type="module" defer src="../js/lytleCreekCams.js"></script>
+  </body>
 </html>

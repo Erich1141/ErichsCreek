@@ -36,21 +36,21 @@ nav a {
 }
 
 #viewer {
-    width: auto;
+  width: auto;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
 
-  justify-content: center;
+  /* justify-content: center;*/
   align-items: flex-start;
 
   border: 2px solid black;
 }
 
 .cameraImage {
-   flex: 0 1 288px;
+  flex: 0 1 288px;
 
   width: 288px;
   max-width: 100%;

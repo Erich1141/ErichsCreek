@@ -28,3 +28,17 @@ nav a {
   text-decoration: none;
   color: white;
 }
+input,label {
+
+  display:block;
+}
+label {
+
+margin-top: .5em;
+margin-bottom: .5em;
+
+}
+input {
+width:40%;
+  height:2em;
+}

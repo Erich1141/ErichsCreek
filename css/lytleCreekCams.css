@@ -102,9 +102,12 @@ nav a {
 }
 
 .imageCard.expanded .imageOverlay {
-  top: 30px;
-  left: 200px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.imageCard.expanded .overlayItem {
   font-size: 24px;
   padding: 10px 16px;
-  z-index: 2;
 }

@@ -75,16 +75,7 @@ nav a {
 }
 
 
-/*.cameraImage {
-  flex: 0 1 300px;
-  border: 2px solid black;
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  margin-top: 2px;
-  object-fit: contain;
-  display: block;
-}*/
+
 .imageCard.expanded {
   position: fixed;
   inset: 0;

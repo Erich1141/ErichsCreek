@@ -57,19 +57,16 @@ nav a {
 .imageOverlay {
   position: absolute;
   inset: 0;
-
-  width: 100%;
-  height: 100%;
-
   pointer-events: none;
   z-index: 2;
 }
 .overlayItem {
   position: absolute;
-  left:125px;
+  left: 50%;
+  transform: translateX(-50%);
 
   color: white;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 
   padding: 5px 8px;
   border-radius: 5px;
@@ -103,5 +100,7 @@ nav a {
 }
 
 .imageCard.expanded .cameraName {
-  left: 500px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }

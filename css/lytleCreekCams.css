@@ -66,7 +66,7 @@ nav a {
 }
 .overlayItem {
   position: absolute;
-  left:150px;
+  left:125px;
 
   color: white;
   background-color: rgba(0, 0, 0, 0);

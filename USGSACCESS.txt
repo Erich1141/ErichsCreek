@@ -1,0 +1,90 @@
+Function to get the new station in lytle creek
+
+async function getUsgsNumberFromSynoptic(stid, synopticToken) {
+  const synopticUrl = new URL(
+    "https://api.synopticdata.com/v2/stations/metadata"
+  );
+
+  synopticUrl.searchParams.set("stid", stid);
+  synopticUrl.searchParams.set("token", synopticToken);
+
+  const synopticResponse = await fetch(synopticUrl);
+
+  if (!synopticResponse.ok) {
+    throw new Error(
+      `Synoptic HTTP error: ${synopticResponse.status}`
+    );
+  }
+
+  const synopticData = await synopticResponse.json();
+  const station = synopticData.STATION?.[0];
+
+  if (!station) {
+    throw new Error(`Synoptic station ${stid} was not found.`);
+  }
+
+  const latitude = Number(station.LATITUDE);
+  const longitude = Number(station.LONGITUDE);
+
+  // Approximately a small neighborhood around the station.
+  const radiusInDegrees = 0.003;
+
+  const bbox = [
+    longitude - radiusInDegrees, // west
+    latitude - radiusInDegrees,  // south
+    longitude + radiusInDegrees, // east
+    latitude + radiusInDegrees   // north
+  ].join(",");
+
+  const usgsUrl = new URL(
+    "https://api.waterdata.usgs.gov/ogcapi/v0/" +
+    "collections/monitoring-locations/items"
+  );
+
+  usgsUrl.searchParams.set("bbox", bbox);
+  usgsUrl.searchParams.set("f", "json");
+  usgsUrl.searchParams.set("limit", "100");
+
+  const usgsResponse = await fetch(usgsUrl);
+
+  if (!usgsResponse.ok) {
+    throw new Error(`USGS HTTP error: ${usgsResponse.status}`);
+  }
+
+  const usgsData = await usgsResponse.json();
+
+  const matches = usgsData.features
+    .filter(feature => {
+      return feature.properties.agency_code === "USGS";
+    })
+    .map(feature => ({
+      usgsId: feature.properties.id,
+      siteNumber:
+        feature.properties.monitoring_location_number,
+      name:
+        feature.properties.monitoring_location_name,
+      siteType:
+        feature.properties.site_type,
+      longitude:
+        feature.geometry?.coordinates?.[0],
+      latitude:
+        feature.geometry?.coordinates?.[1]
+    }));
+
+  return {
+    synopticStation: stid,
+    synopticName: station.NAME,
+    synopticCoordinates: {
+      latitude,
+      longitude
+    },
+    usgsMatches: matches
+  };
+}
+
+const result = await getUsgsNumberFromSynoptic(
+  "USGSHY19669",
+  process.env.SYNOPTIC_TOKEN
+);
+
+console.dir(result, { depth: null });

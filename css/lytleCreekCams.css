@@ -23,6 +23,7 @@ nav {
   height: 60px;
   border: 2px solid rgb(23, 44, 235);
   background-color: black;
+  
 }
 
 nav div {
@@ -30,12 +31,14 @@ nav div {
   text-align: center;
   font-size: 1.5em;
   color: aqua;
+  
 }
 
 nav a {
   height: auto;
   text-decoration: none;
   color: white;
+  
 }
 
 /* Camera viewer */
